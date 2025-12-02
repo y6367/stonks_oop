@@ -1,3 +1,9 @@
+// Joewah Yu
+// 11/30/2025
+// CSE 122
+// C3: OOP It!
+// TA: Katharine Zhang
+
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.*;
