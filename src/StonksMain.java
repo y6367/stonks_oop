@@ -43,6 +43,9 @@ public class StonksMain {
     }
 
     // Prompts the user using the given Scanner for the stock the user wants to purchase
+    // Parameters:
+    // - input: to take in user input
+    // - stonks: the stock market where we buy stocks
     public static void buyStonks(Scanner input, Stonks stonks) {
         System.out.print("Enter the stock ticker: ");
         String ticker = input.nextLine();
@@ -54,6 +57,9 @@ public class StonksMain {
 
     // Prompts the user using the given Scanner for the stock the user wants to sell from the
     // user's portfolio
+    // Parameters:
+    // - input: to take in user input
+    // - stonks: the stock market where we sell stocks
     public static void sellStonks(Scanner input, Stonks stonks) {
         System.out.print("Enter the stock ticker: ");
         String ticker = input.nextLine();
@@ -65,6 +71,11 @@ public class StonksMain {
 
     // Prompts the user using the given Scanner for the file name to save the current stocks in
     // the user's portfolio
+    // Exceptions:
+    // - if file inputted by user doesn't exist, throw FileNotFoundException
+    // Parameters:
+    // - input: to take in user input
+    // - stonks: the stock market where we save stocks
     public static void saveStonks(Scanner input, Stonks stonks) throws FileNotFoundException {
         System.out.print("Enter new portfolio file name: ");
         String fileName = input.nextLine();

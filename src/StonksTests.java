@@ -3,6 +3,7 @@
 // CSE 122
 // C3: OOP It!
 // TA: Katharine Zhang
+// This class is to test the methods of the Stonks class.
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -11,6 +12,7 @@ import java.util.Scanner;
 
 public class StonksTests {
     @Test
+    @DisplayName("Test for buying stock")
     public void buyStonkTest() throws FileNotFoundException {
         Stonks stonk = new Stonks("stonks.tsv");
         assertTrue(stonk.buyStonks("AAPL", 150.2));
@@ -18,6 +20,7 @@ public class StonksTests {
     }
 
     @Test
+    @DisplayName("Test for selling stock")
     public void sellStonkTest() throws FileNotFoundException {
         Stonks stonk = new Stonks("stonks.tsv");
         stonk.buyStonks("AAPL", 150.2);
@@ -26,6 +29,7 @@ public class StonksTests {
     }
 
     @Test
+    @DisplayName("Test for displaying stock")
     public void displayStonksTest() throws FileNotFoundException {
         Stonks stonk = new Stonks("stonks.tsv");
         stonk.buyStonks("AAPL", 150.2);
@@ -34,6 +38,7 @@ public class StonksTests {
     }
 
     @Test
+    @DisplayName("Test for saving stocks to a file")
     public void saveStonksTest() throws FileNotFoundException {
         Stonks stonk = new Stonks("stonks.tsv");
         stonk.buyStonks("AAPL", 150.2);
@@ -41,6 +46,6 @@ public class StonksTests {
 
         Scanner scanner = new Scanner(new File("temp.txt"));
         String line = scanner.nextLine();
-        assertEquals(line, "AAPL 1");
+        assertEquals(line, "AAPL 1.0");
     }
 }
